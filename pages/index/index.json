@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-tabbar": "../components/miniprogram_npm/vant-weapp/tabbar/index",
+    "van-tabbar-item": "../components/miniprogram_npm/vant-weapp/tabbar-item/index",
+    "zy-order":"../order",
+    "zy-info":"../info"
+  }
+ 
+}

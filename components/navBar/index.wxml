@@ -1,0 +1,14 @@
+<!--components/navBar/index.wxml-->
+<view class='nav-bar-container' style='background:{{background}};height:{{statusBarHeight+menuHeight}}px'>
+  <view class='status-bar' style='height:{{statusBarHeight}}px;'></view>
+  <view class='menu' style='height:{{menuHeight}}px; color:{{color}}'>
+    <view class='left' bindtap='{{arrow?"goBack":""}}'>
+      <view class='arrow' wx:if="{{arrow}}" style='border-color: {{arrowColor}};'></view>
+      <slot wx:else name="left"></slot>
+    </view>
+    <view class='title'>
+      <view class="content" wx:if="{{title}}">{{title}}</view>
+      <slot wx:else name="title"></slot>
+    </view>
+  </view>
+</view>

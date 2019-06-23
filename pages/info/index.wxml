@@ -1,0 +1,55 @@
+<!--pages/info/index.wxml-->
+<view hidden='{{!show}}' class='info-container'>
+  <view class='user-info'>
+    <view class='head'>
+      <open-data class="url" type="userAvatarUrl"></open-data>
+      <view class='name'>
+        <block wx:if="{{memberid > 0}}">
+          <open-data wx:if="" class="login" type="userNickName"></open-data>
+          <view class='grade'>白金会员</view>
+        </block>
+        <block wx:else>
+          <view class='login'>登录/注册</view>
+          <view class='grade'>立即注册尽享优惠</view>
+        </block>
+      </view>
+    </view>
+    <ul class='money'>
+
+      <li class="item">
+        <view class='title'>积分</view>
+        <view class='value'>100</view>
+      </li>
+      <li class="item">
+        <view class='title'>积分</view>
+        <view class='value'>100</view>
+      </li>
+      <li class="item">
+        <view class='title'>余额·充值</view>
+        <view class='value'>100</view>
+      </li>
+    </ul>
+  </view>
+  <ul class='activity'>
+    <li>
+      <van-icon name="point-gift-o" />
+      <view class='des'>邀请有礼</view>
+    </li>
+    <li>
+      <van-icon name="point-gift-o" />
+      <view class='des'>邀请有礼</view>
+    </li>
+    <li>
+      <van-icon name="point-gift-o" />
+      <view class='des'>邀请有礼</view>
+    </li>
+    <li>
+      <van-icon name="point-gift-o" />
+      <view class='des'>邀请有礼</view>
+    </li>
+    <li>
+      <van-icon name="point-gift-o" />
+      <view class='des'>邀请有礼</view>
+    </li>
+  </ul>
+</view>

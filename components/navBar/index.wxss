@@ -1,0 +1,53 @@
+/* components/navBar/index.wxss */
+.nav-bar-container{
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.nav-bar-container .status-bar{
+  width: 100%;
+}
+.nav-bar-container .menu{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:18px;
+  font-weight:500;
+  position: relative;
+}
+.nav-bar-container .menu .left{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.nav-bar-container .menu .left .arrow{
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-45deg)
+}
+
+.nav-bar-container .menu .title{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar-container .menu .title .content{
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

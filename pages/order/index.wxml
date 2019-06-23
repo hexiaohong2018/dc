@@ -1,0 +1,58 @@
+<!--pages/order/index.wxml-->
+
+<view class='order-container' hidden='{{!show}}'>
+  <view class='mark' wx:if="{{showShoppingCart}}" bindtap='packUP'></view>
+  <scroll-view class='left-nav' bindtap="onChange" scroll-y>
+    <li class="{{activeId==item.id?'active':''}}" wx:for="{{category}}" wx:key="" data-id="{{item.id}}">
+      <view class='left-border' wx:if="{{activeId==item.id}}"></view>
+      <text data-id="{{item.id}}">{{item.title}}</text>
+    </li>
+  </scroll-view>
+  <view class="right-container">
+    <view class='title'>{{category[activeId].title}}</view>
+    <scroll-view class='item-container' scroll-y>
+      <view class='item'>1111</view>
+      <view class='item'>1111</view>
+      <view class='item'>1111</view>
+      <view class='item'>1111</view>
+      <view class='item'>1111</view>
+      <view class='item'>1111</view>
+    </scroll-view>
+  </view>
+  <view class='shopping-cart' style='transform:translateY({{showShoppingCart?0:150}}%)'>
+    <view class='pack-up' bindtap='packUP'></view>
+    <ul class="content">
+      <li>
+        <view class="name">小食拼盘</view>
+        <view class="price">￥12</view>
+        <view class='num'>
+          <i class="iconfont icon-jian icon-style"></i>
+          <text>3</text>
+          <i class="iconfont icon-jia icon-style"></i>
+        </view>
+      </li>
+      <li>
+        <view class="name">小食拼盘</view>
+        <view class="price">￥12</view>
+        <view class='num'>
+          <i class="iconfont icon-jian icon-style"></i>
+          <text>3</text>
+          <i class="iconfont icon-jia icon-style"></i>
+        </view>
+      </li>
+    </ul>
+    <view class='op'>
+      <van-icon name="orders-o" size='45rpx' color="red" />
+      <view class='total'>
+        <view class='price'>总计 ￥184</view>
+        <view class='des'>共12件菜品，已优惠8元</view>
+      </view>
+      <view class='pay'>去结算</view>
+    </view>
+
+  </view>
+  <view class='cart-tip' bindtap='onclick'>
+    <van-icon name="shopping-cart-o" />
+    <i class="dot"></i>
+  </view>
+</view>
